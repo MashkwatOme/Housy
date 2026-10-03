@@ -1,0 +1,546 @@
+.tenant-payments-layout {
+    min-height: 100vh;
+    background-color: var(--color-background-offwhite);
+    display: flex;
+    flex-direction: column;
+}
+
+.tenant-payments-main {
+    flex: 1;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.payments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.payments-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 6px;
+}
+
+.payments-subheading {
+    font-size: 15px;
+    color: var(--color-text-muted);
+}
+
+/* Banner box */
+.billing-banner-flex {
+    background-color: var(--color-background-white);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 36px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.billing-stat-box .label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-light);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.billing-stat-box .balance-val {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.billing-stat-box .balance-val.alert-color {
+    color: #e53e3e;
+}
+
+.billing-stat-box .balance-val.success-color {
+    color: #38a169;
+}
+
+.billing-stat-box .desc {
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.billing-actions {
+    max-width: 420px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.billing-note {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+.btn-pay-outstanding {
+    background-color: #e53e3e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-pay-outstanding:hover {
+    background-color: #c53030;
+}
+
+/* Invoices table */
+.invoices-section-card {
+    background-color: var(--color-background-white);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.invoices-section-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 24px;
+}
+
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.invoices-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.invoices-table th {
+    padding: 16px 20px;
+    border-bottom: 2px solid var(--color-border);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.invoices-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.invoices-table tr:hover td {
+    background-color: #fafbfc;
+}
+
+.invoices-table .font-bold {
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.invoices-table .font-medium {
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.invoices-table .status-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.invoices-table .status-pending {
+    background-color: #fff5f5;
+    color: #e53e3e;
+}
+
+.invoices-table .status-paid {
+    background-color: #f0fff4;
+    color: #38a169;
+}
+
+.btn-invoice-action {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-invoice-action:hover {
+    border-color: var(--color-text-light);
+    color: var(--color-text-main);
+    background-color: #f8fafc;
+}
+
+.btn-invoice-action.highlight-btn {
+    border-color: #e53e3e;
+    color: #e53e3e;
+}
+
+.btn-invoice-action.highlight-btn:hover {
+    background-color: #fff5f5;
+}
+
+/* Modal Overlay */
+.checkout-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.checkout-modal-card {
+    background-color: var(--color-background-white);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15), 0 10px 10px -5px rgba(0,0,0,0.04);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--color-border);
+}
+
+.modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.btn-close-modal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-text-light);
+    transition: color 0.2s;
+}
+
+.btn-close-modal:hover {
+    color: var(--color-text-main);
+}
+
+/* Invoice bar */
+.invoice-preview-bar {
+    background-color: #f8fafc;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoice-desc {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.invoice-total {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+.final-total {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+/* Method tabs */
+.payment-method-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.tab-btn {
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    background-color: #fafbfc;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background-color: white;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* Checkout Form */
+.checkout-form {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group-full {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-light);
+}
+
+.modal-input {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.modal-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(31, 59, 102, 0.08);
+}
+
+.input-with-brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card-brand-badge {
+    position: absolute;
+    right: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-primary);
+    background-color: #f1f5f9;
+    padding: 3px 6px;
+    border-radius: 4px;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+.btn-modal-checkout {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-modal-checkout:hover {
+    background-color: #162a49;
+}
+
+.checkout-trust-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--color-text-light);
+    margin-top: 4px;
+}
+
+/* bKash additions */
+.bkash-logo-banner {
+    background-color: #e2125d;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.wallet-disclaimer {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Checkout States */
+.checkout-status-pane {
+    padding: 60px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-status-pane h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: var(--color-text-main);
+}
+
+.checkout-status-pane p {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    max-width: 320px;
+}
+
+/* Spinner */
+.payment-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #e2e8f0;
+    border-radius: 50%;
+    border-top-color: var(--color-primary);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success Checkmark scaling */
+.checkmark__circle {
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s unique forwards;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}
+
+.success-heading {
+    color: #38a169 !important;
+}
+
+.success-text {
+    font-size: 13px !important;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .billing-banner-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .billing-actions {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.btn-back-browse-payments {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--color-primary);
+    transition: background-color 0.2s ease;
+}
+
+.btn-back-browse-payments:hover {
+    background-color: #162a49;
+    border-color: #162a49;
+}

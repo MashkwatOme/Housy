@@ -1,0 +1,109 @@
+.requests-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.request-badge {
+    background: #ef4444;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.request-card {
+    background: #fff;
+    border: 1px solid var(--owner-border);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.request-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.request-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.request-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.request-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.request-time {
+    font-size: 11px;
+    color: var(--owner-secondary);
+}
+
+.request-body {
+    margin-bottom: 16px;
+}
+
+.request-property-link {
+    font-size: 12px;
+    color: var(--owner-secondary);
+    margin-bottom: 8px;
+}
+
+.property-highlight {
+    color: var(--owner-accent);
+    font-weight: 600;
+}
+
+.request-message {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--owner-primary);
+    font-style: italic;
+}
+
+.request-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.btn-view-details-small {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-message-small {
+    background: #fff;
+    color: #000;
+    border: 1px solid var(--owner-border);
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}

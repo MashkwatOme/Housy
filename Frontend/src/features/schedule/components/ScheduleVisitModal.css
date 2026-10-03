@@ -1,0 +1,245 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--color-background-white);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px 16px;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin: 0;
+}
+
+.btn-close-modal {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.btn-close-modal:hover {
+    color: var(--color-text-main);
+}
+
+.modal-body {
+    padding: 0 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.property-snippet {
+    background-color: #F4F6F8;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.snippet-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.snippet-info h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin: 0 0 4px 0;
+}
+
+.snippet-info p {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+}
+
+.section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--color-text-light); /* #64748B */
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.dates-row {
+    display: flex;
+    gap: 12px;
+}
+
+.date-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-background-white);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.date-btn:hover {
+    border-color: #cbd5e1;
+}
+
+.date-btn.active {
+    background-color: #EEF2F6;
+    border-color: var(--color-primary);
+}
+
+.date-btn.active .date-day,
+.date-btn.active .date-num {
+    color: var(--color-primary);
+}
+
+.date-day {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 4px;
+}
+
+.date-num {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.times-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.time-btn {
+    padding: 14px 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-main);
+    background-color: var(--color-background-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.time-btn:hover {
+    border-color: #cbd5e1;
+}
+
+.time-btn.active {
+    background-color: #EEF2F6;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.personal-details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.form-input {
+    padding: 14px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-text-main);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+}
+
+.form-input.full-width {
+    width: 100%;
+}
+
+.form-input.half-width {
+    width: calc(50% - 6px); /* accounting for gap */
+}
+
+.modal-footer {
+    padding: 0 32px 32px;
+}
+
+.btn-confirm-schedule {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-confirm-schedule:hover {
+    background-color: #152B4B;
+}
+
+.btn-confirm-schedule:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* Scrollbar styling for modal */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+}

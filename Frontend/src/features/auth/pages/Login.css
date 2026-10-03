@@ -1,0 +1,161 @@
+.auth-form-container {
+    width: 100%;
+}
+
+.auth-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.auth-subheading {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 32px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.forgot-link {
+    font-size: 12px;
+    color: #3182CE;
+    font-weight: 500;
+}
+
+.form-input {
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.btn-toggle-visibility {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+}
+
+.btn-auth-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-auth-primary:hover {
+    background-color: #152B4B;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.auth-divider span {
+    padding: 0 10px;
+    color: var(--color-text-light);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.social-auth-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--color-background-white);
+    border: 1px solid var(--color-border);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-main);
+    transition: background-color 0.2s;
+}
+
+.btn-social:hover {
+    background-color: #F8FAFC;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.auth-footer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.btn-link {
+    color: #1A365D; /* slightly different dark blue link color in design */
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}

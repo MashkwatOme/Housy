@@ -1,0 +1,192 @@
+.admin-layout-container {
+    --al-primary: var(--color-primary, #4F46E5);
+    --al-ink: #0f172a;
+    --al-muted: #64748b;
+    --al-border: #e5e7f0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(79, 70, 229, 0.06), transparent 32%),
+        #f6f7fb;
+    font-family: 'Inter', sans-serif;
+}
+
+.admin-header {
+    height: 68px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--al-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-header-left {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    min-width: 0;
+}
+
+.admin-brand-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.admin-brand-horizontal h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #312E81, var(--al-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.admin-badge {
+    background: #eef2ff;
+    color: var(--al-primary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.admin-top-nav {
+    display: flex;
+    gap: 0.25rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.admin-top-nav::-webkit-scrollbar { display: none; }
+
+.nav-link {
+    color: var(--al-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0.85rem;
+    border-radius: 9px;
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+}
+
+.nav-link.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.nav-link.disabled:hover {
+    color: var(--al-muted);
+    background: transparent;
+}
+
+.nav-link:not(.disabled):hover {
+    color: var(--al-ink);
+    background: #f1f2f9;
+}
+
+.nav-link.active {
+    color: var(--al-primary);
+    background: #eef2ff;
+    font-weight: 600;
+}
+
+.admin-header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--al-muted);
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+}
+
+.header-icon:hover {
+    color: var(--al-ink);
+    background: #f1f2f9;
+}
+
+.admin-profile-top {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.85rem 0.3rem 0.35rem;
+    border: 1px solid var(--al-border);
+    border-radius: 999px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.admin-profile-top:hover {
+    border-color: #c7d2fe;
+    box-shadow: 0 4px 14px -6px rgba(79, 70, 229, 0.35);
+}
+
+.profile-initials {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--al-primary), #7c3aed);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.profile-details-mini {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.profile-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--al-ink);
+}
+
+.profile-role {
+    font-size: 0.68rem;
+    color: var(--al-muted);
+}
+
+.admin-profile-top:hover .profile-role { color: #dc2626; }
+
+.admin-main-horizontal {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .admin-header { padding: 0 1rem; }
+    .admin-header-left { gap: 1rem; }
+    .profile-details-mini { display: none; }
+    .admin-profile-top { padding: 0.3rem; }
+    .admin-main-horizontal { padding: 1.25rem 1rem; }
+}

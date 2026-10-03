@@ -1,0 +1,132 @@
+.table-container {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid var(--owner-border);
+    overflow: hidden;
+}
+
+.property-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.property-table th {
+    padding: 16px 24px;
+    background: #fafafa;
+    color: var(--owner-secondary);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--owner-border);
+}
+
+.property-table td {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--owner-border);
+}
+
+.property-table tr:last-child td {
+    border-bottom: none;
+}
+
+.property-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.property-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.property-thumb-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--owner-secondary);
+}
+
+.property-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--owner-primary);
+}
+
+.property-loc {
+    font-size: 12px;
+    color: var(--owner-secondary);
+    margin-top: 2px;
+}
+
+.status-pill {
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pill.occupied {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.status-pill.vacant {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.property-rent {
+    font-size: 14px;
+}
+
+.rent-amount {
+    font-weight: 700;
+    color: var(--owner-primary);
+}
+
+.rent-period {
+    color: var(--owner-secondary);
+    font-size: 12px;
+    margin-left: 2px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-action.view { color: var(--owner-secondary); }
+.btn-action.view:hover { background: #f1f5f9; color: var(--owner-primary); }
+
+.btn-action.edit { color: #3b82f6; }
+.btn-action.edit:hover { background: #eff6ff; }
+
+.btn-action.delete { color: #ef4444; }
+.btn-action.delete:hover { background: #fef2f2; }
+
+.empty-row {
+    text-align: center;
+    padding: 40px !important;
+    color: var(--owner-secondary);
+}

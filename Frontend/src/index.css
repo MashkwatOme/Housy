@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@400;700&family=Great+Vibes&display=swap');
+
+:root {
+  /* Colors */
+  --color-primary: #4F46E5; /* Iris */
+  --color-primary-dark: #312E81;
+  --color-secondary: #7C3AED; /* Purple accent */
+  --color-accent: #8B5CF6; /* Violet */
+  --color-background-offwhite: #F8F7FF; /* Soft iris-tinted bg */
+  --color-background-white: #FFFFFF;
+  --color-surface: #F0EDFF;
+  --color-border: #E7E5FF;
+  --color-text-main: #111827; 
+  --color-text-muted: #6B7280;
+  --color-text-light: #9CA3AF;
+  
+  --color-badge-premium-bg: #1A365D;
+  --color-badge-premium-text: #FFFFFF;
+  --color-badge-available-bg: #2B6CB0;
+  --color-badge-available-text: #FFFFFF;
+  --color-badge-green-bg: #38A169;
+  --color-badge-green-text: #FFFFFF;
+  --color-badge-red-bg: #E53E3E;
+  --color-badge-red-text: #FFFFFF;
+  --color-badge-historical-bg: #4A5568;
+  --color-badge-historical-text: #FFFFFF;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background:
+    radial-gradient(circle at top left, rgba(79, 70, 229, 0.08), transparent 34%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 30%),
+    linear-gradient(180deg, #FBFAFF 0%, var(--color-background-offwhite) 55%, #FFFFFF 100%);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(79, 70, 229, 0.18);
+  color: var(--color-text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-family);
+}
+
+input {
+  font-family: var(--font-family);
+}

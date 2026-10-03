@@ -1,0 +1,201 @@
+.property-filters {
+    width: 280px;
+    background-color: #F9FAFF;
+    border-right: 1px solid var(--color-border);
+    padding: 30px 24px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+}
+
+.filters-header {
+    margin-bottom: 30px;
+}
+
+.filters-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.filters-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.filters-subtitle {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.filter-group {
+    margin-bottom: 28px;
+}
+
+.filter-group-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.filter-group-title svg {
+    color: var(--color-text-muted);
+}
+
+/* Range Slider */
+.range-slider-mock {
+    padding: 10px 0;
+}
+
+.slider-input {
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    pointer-events: none;
+}
+
+.slider-input::-webkit-slider-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-background-white);
+    border: 3px solid var(--color-primary);
+    -webkit-appearance: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.slider-input::-moz-range-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-background-white);
+    border: 3px solid var(--color-primary);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-top: 8px;
+}
+
+/* Checkboxes */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--color-text-main);
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-background-white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.checkbox-label input:checked + .checkbox-custom {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.checkbox-label input:checked + .checkbox-custom::after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
+}
+
+/* Segmented Control */
+.segmented-control {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--color-background-white);
+}
+
+.segment {
+    flex: 1;
+    padding: 8px 0;
+    font-size: 13px;
+    color: var(--color-text-main);
+    font-weight: 500;
+    border-right: 1px solid var(--color-border);
+    transition: all 0.2s;
+}
+
+.segment:last-child {
+    border-right: none;
+}
+
+.segment.active {
+    background-color: #EEF2FF; /* Iris accent */
+    color: var(--color-primary);
+}
+
+.segment:hover:not(.active) {
+    background-color: #F5F3FF;
+}
+
+/* Date Input */
+.date-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--color-text-main);
+    background-color: var(--color-background-white);
+    outline: none;
+}
+
+.date-input:focus {
+    border-color: var(--color-primary);
+}
+
+/* Apply button */
+.apply-btn {
+    width: 100%;
+    padding: 12px 0;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.apply-btn:hover {
+    background-color: var(--color-primary-dark);
+}

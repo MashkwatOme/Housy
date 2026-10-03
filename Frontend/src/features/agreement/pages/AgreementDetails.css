@@ -1,0 +1,1402 @@
+.agreement-details-layout {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', -apple-system, sans-serif;
+    padding-bottom: 90px; /* Space for fixed bottom bar */
+}
+
+/* Draft banner at the top */
+.draft-editable-top-banner {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.draft-editable-top-banner .banner-icon {
+    font-size: 14px;
+}
+
+.draft-editable-top-banner span {
+    color: #e2e8f0;
+}
+
+.agreement-details-main {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Header style options */
+.details-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.title-row-flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.meta-badge-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 0.8px;
+}
+
+.version-tag {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.agreement-title-id {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin: 0 0 6px 0;
+}
+
+.created-timeline-info {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+
+.header-actions-group {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-header-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-header-action.outline {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+}
+
+.btn-header-action.outline:hover {
+    border-color: #94a3b8;
+    color: #0f172a;
+    background-color: #f8fafc;
+}
+
+.btn-header-action.primary {
+    background-color: #0a2540;
+    border: none;
+    color: #ffffff;
+}
+
+.btn-header-action.primary:hover {
+    background-color: #12375c;
+}
+
+/* Two-column layout */
+.details-grid-columns {
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;
+    gap: 32px;
+}
+
+.details-left-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Detail Card standard rules */
+.details-card-box {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.card-inner-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-inner-title.align-center {
+    justify-content: center;
+}
+
+/* Property Showcase styling */
+.details-card-box.showcase-property {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.showcase-thumb-img {
+    width: 140px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.showcase-thumb-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-content-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.showcase-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.showcase-address {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+.property-room-badges {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.room-badge {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Profile cards layout */
+.profiles-double-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.profile-role-header {
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.profile-flex-body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile-initials-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.profile-initials-circle.green { background-color: #10b981; }
+.profile-initials-circle.blue { background-color: #2563eb; }
+
+.profile-meta-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.profile-name-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.profile-sub-line {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Logistics grid specs */
+.logistics-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.logistic-value-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.logistic-value-item .item-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
+}
+
+.logistic-value-item .item-val {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+}
+
+/* Payment specs styling */
+.payment-terms-values-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pay-term-row.flex-item {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+}
+
+.spec-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-term-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.pay-bold-val-row {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.pay-bold-val-row .val-currency {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0a2540;
+}
+
+.pay-bold-val-row .val-main-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0a2540;
+    line-height: 1;
+}
+
+.pay-bold-val-row .val-per-month {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.pay-medium-val {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.pay-medium-val.text-muted {
+    font-weight: 500;
+    color: #64748b;
+}
+
+/* Agreement rules - standard and custom */
+.rules-section-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.rules-section-subtitle {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.rules-section-subtitle.margin-top {
+    margin-top: 24px;
+}
+
+.standard-clauses-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.standard-clause-badge {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 14px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #334155;
+    font-weight: 500;
+}
+
+.badge-icon {
+    font-size: 18px;
+}
+
+.custom-rules-container {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.no-rules-text {
+    font-size: 13px;
+    color: #94a3b8;
+    font-style: italic;
+    margin: 0 0 16px 0;
+}
+
+.custom-rules-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.custom-rule-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #334155;
+    font-weight: 500;
+}
+
+.rule-bullet {
+    color: #3b82f6;
+    font-weight: 800;
+}
+
+.rule-text {
+    flex: 1;
+}
+
+.btn-delete-rule {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.btn-delete-rule:hover {
+    background-color: #fef2f2;
+}
+
+.add-custom-clause-inline-form {
+    display: flex;
+    gap: 10px;
+}
+
+.clause-text-input {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.clause-text-input:focus {
+    border-color: #2563eb;
+}
+
+.btn-add-clause {
+    background-color: #0a2540;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-add-clause:hover {
+    background-color: #12375c;
+}
+
+/* Agreement feedback styling */
+.feedback-section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.negotiation-feedback-textarea {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.negotiation-feedback-textarea:focus {
+    border-color: #2563eb;
+}
+
+.notes-helper-caption {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Final Signatures card */
+.signatures-flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.signature-box-card {
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signature-box-card:hover {
+    border-color: #2563eb;
+    background-color: #f8fafc;
+}
+
+.sig-icon-wrapper {
+    margin-bottom: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+}
+
+.sig-status-label {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.sig-name-display {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.sig-role-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* Right pane sidebar cards styling */
+.details-right-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.right-widget-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.right-widget-card.bg-navy {
+    background-color: #0a2540;
+    border-color: #0a2540;
+    box-shadow: 0 10px 20px -5px rgba(10, 37, 64, 0.3);
+}
+
+.widget-header-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.widget-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #475569;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.widget-title.text-white {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.widget-title.margin-bottom {
+    margin-bottom: 16px;
+}
+
+.widget-paragraph-text {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+}
+
+.widget-paragraph-text.text-light {
+    color: #94a3b8;
+}
+
+.widget-btn-action {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.widget-btn-action.light {
+    background-color: #ffffff;
+    border: none;
+    color: #0a2540;
+}
+
+.widget-btn-action.light:hover {
+    background-color: #f1f5f9;
+}
+
+.widget-btn-action.outline {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+}
+
+.widget-btn-action.outline:hover {
+    border-color: #94a3b8;
+    color: #0f172a;
+    background-color: #f8fafc;
+}
+
+/* Activity Timeline widget */
+.agreement-activity-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.activity-timeline-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.timeline-dot-indicator {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.activity-timeline-item.active .timeline-dot-indicator.checked {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.activity-timeline-item.pending .timeline-dot-indicator {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+}
+
+.timeline-info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.activity-title-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.activity-timestamp {
+    font-size: 11px;
+    color: #64748b;
+}
+
+.activity-timestamp.text-muted {
+    font-weight: 500;
+}
+
+/* Summary Details widget */
+.right-widget-card.border-only {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    box-shadow: none;
+}
+
+.summary-specs-list-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summary-spec-row-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.spec-lbl-name {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.spec-val-desc {
+    color: #0f172a;
+}
+
+.spec-val-desc.font-bold {
+    font-weight: 700;
+}
+
+.spec-val-desc.font-medium {
+    font-weight: 600;
+}
+
+.spec-val-desc.inline-badge {
+    background-color: #f1f5f9;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* Bottom fixed bar styles */
+.agreement-details-bottom-fixed-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #cbd5e1;
+    box-shadow: 0 -4px 20px -5px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    z-index: 999;
+}
+
+.fixed-bar-left-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-badge-indicator {
+    background-color: #fef3c7;
+    color: #92400e;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.review-meta-text {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.fixed-bar-right-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-bottom-bar {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-bottom-bar.outline {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+}
+
+.btn-bottom-bar.outline:hover {
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+.btn-bottom-bar.primary {
+    background-color: #0a2540;
+    border: none;
+    color: #ffffff;
+}
+
+.btn-bottom-bar.primary:hover {
+    background-color: #12375c;
+}
+
+/* Spinner for detailed load */
+.details-loading-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8fafc;
+    color: #64748b;
+}
+
+.details-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #cbd5e1;
+    border-top: 4px solid #0a2540;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 16px;
+}
+
+.error-details-view {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-details-box {
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    max-width: 480px;
+}
+
+.error-details-box h3 {
+    color: #ef4444;
+    margin: 0 0 8px 0;
+}
+
+.error-details-box p {
+    color: #64748b;
+    margin: 0 0 20px 0;
+}
+
+.btn-back-details {
+    background-color: #0a2540;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+    .details-grid-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .agreement-details-main {
+        padding: 24px 16px;
+    }
+    .profiles-double-grid {
+        grid-template-columns: 1fr;
+    }
+    .logistics-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .pay-term-row.flex-item {
+        grid-template-columns: 1fr;
+    }
+    .signatures-flex-container {
+        grid-template-columns: 1fr;
+    }
+    .agreement-details-bottom-fixed-bar {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+        padding: 16px 20px;
+    }
+    .fixed-bar-left-info {
+        justify-content: center;
+    }
+    .fixed-bar-right-buttons {
+        justify-content: space-between;
+    }
+    .fixed-bar-right-buttons button {
+        flex: 1;
+    }
+}
+
+/* Negotiation and Date editor styles */
+.negotiation-feedback-view-box {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.5;
+    min-height: 80px;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+.date-input-field {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 700;
+    color: #0f172a;
+    outline: none;
+    background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.date-input-field:focus {
+    border-color: #2563eb;
+    background-color: #f8fafc;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* SIGNATURE WORKFLOW PREMIUM AESTHETICS */
+/* ──────────────────────────────────────────────────────── */
+
+.signature-success-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 1px solid #a7f3d0;
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin-bottom: 28px;
+    color: #065f46;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+    animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.success-banner-check {
+    background-color: #10b981;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+    flex-shrink: 0;
+}
+
+.btn-download-pdf {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #065f46;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-download-pdf:hover:not(:disabled) {
+    background-color: #047857;
+}
+
+.btn-download-pdf:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.signature-status-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+}
+
+.signature-status-card.signed {
+    border-color: #10b981;
+    background-color: #fcfdfd;
+    box-shadow: 0 10px 25px -10px rgba(16, 185, 129, 0.08);
+}
+
+.signature-status-card.pending {
+    border-style: dashed;
+    border-color: #94a3b8;
+    background-color: #f8fafc;
+}
+
+.signature-status-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.06);
+}
+
+.captured-signature-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.captured-sig-image {
+    max-height: 90px;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.05));
+    animation: scaleIn 0.3s ease-out;
+}
+
+.captured-signature-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.sig-pending-icon {
+    font-size: 32px;
+    color: #94a3b8;
+    animation: pulseSlow 2s infinite ease-in-out;
+}
+
+.sig-status-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background-color: #f1f5f9;
+}
+
+.sig-status-label.success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.sig-status-label.warning {
+    background-color: #fef3c7;
+    color: #92400e;
+    animation: pulseBorder 1.5s infinite alternate;
+}
+
+/* Interactive Signature Pad Section */
+.interactive-signature-pad-container {
+    margin-top: 36px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08);
+}
+
+.signature-pad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pad-instruction-text {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 500;
+    max-width: 480px;
+    line-height: 1.5;
+}
+
+.signature-tabs-buttons {
+    display: flex;
+    background-color: #f1f5f9;
+    padding: 4px;
+    border-radius: 8px;
+    gap: 2px;
+}
+
+.sig-tab-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    color: #64748b;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sig-tab-btn:hover {
+    color: #0f172a;
+}
+
+.sig-tab-btn.active {
+    background-color: #ffffff;
+    color: #0a2540;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05);
+}
+
+.signature-tab-content {
+    background-color: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: border-color 0.2s;
+}
+
+.signature-tab-content:focus-within {
+    border-color: #2563eb;
+}
+
+/* Draw signature canvas */
+.draw-signature-canvas-container {
+    position: relative;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfdfd;
+}
+
+.signature-canvas-pad {
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    cursor: crosshair;
+    width: 100%;
+    max-width: 600px;
+    height: 180px;
+    box-shadow: inset 0 2px 4px rgba(15, 23, 42, 0.02);
+}
+
+.btn-sig-clear-pad {
+    margin-top: 12px;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-sig-clear-pad:hover {
+    background-color: #f8fafc;
+    color: #ef4444;
+    border-color: #fca5a5;
+}
+
+/* Typed signature */
+.type-signature-input-container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.typed-signature-text-input {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.typed-signature-text-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.typed-signature-live-preview-box {
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 120px;
+    justify-content: center;
+}
+
+.preview-label-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.signature-type-preview-font {
+    font-family: 'Great Vibes', 'Caveat', 'Brush Script MT', cursive;
+    font-size: 44px;
+    color: #0b2540;
+    text-align: center;
+    user-select: none;
+    line-height: 1;
+    padding-top: 10px;
+    transition: all 0.2s;
+}
+
+/* Submit Action Box */
+.signature-submit-action-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-submit-signature {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+}
+
+.btn-submit-signature:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-submit-signature:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Inline Spinner Loader */
+.btn-spinner-loader {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #ffffff;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+}
+
+/* Dynamic Activity Timeline Styling updates */
+.activity-timeline-item.completed .timeline-dot-indicator {
+    background-color: #10b981;
+    color: #ffffff;
+    border-color: #10b981;
+}
+
+.activity-timeline-item.completed .activity-title-text {
+    color: #0f172a;
+}
+
+.activity-timeline-item.pending .timeline-dot-indicator {
+    border-style: dashed;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseSlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes pulseBorder {
+    0% { box-shadow: 0 0 0 0px rgba(245, 158, 11, 0.4); }
+    100% { box-shadow: 0 0 0 4px rgba(245, 158, 11, 0); }
+}
+
+@keyframes pulseBorderBlue {
+    0% { box-shadow: 0 0 0 0px rgba(37, 99, 235, 0.4); }
+    100% { box-shadow: 0 0 0 4px rgba(37, 99, 235, 0); }
+}
+
+/* Small adjustments to media queries for interactive signature pads */
+@media (max-width: 640px) {
+    .signature-pad-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .signature-canvas-pad {
+        height: 140px;
+    }
+}
+

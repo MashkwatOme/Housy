@@ -1,0 +1,23 @@
+# Secret environment files
+.env
+.env.*
+!.env.example
+
+# Installed dependencies
+node_modules/
+
+# Generated frontend output
+dist/
+
+# Logs and temporary files
+*.log
+logs/
+.cache/
+
+# Editor files
+.vscode/
+.idea/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
