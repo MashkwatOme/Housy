@@ -1,6 +1,20 @@
+
 # Housy
 
 Housy is a full-stack rental property platform that connects renters and property owners in one place. It supports property discovery, interactive walkthroughs, lease requests, real-time communication, digital rental agreements, payments, maintenance requests, and account management.
+
+<!-- Optional: record a short screen capture of the app and drop it here -->
+<!-- <p align="center"><img src="image/demo.gif" alt="Housy demo" width="85%"></p> -->
+
+## Contents
+
+- [Features](#features)
+- [Architecture](#architecture)
+- [Technology stack](#technology-stack)
+- [Project structure](#project-structure)
+- [Getting started](#prerequisites)
+- [Environment configuration](#environment-configuration)
+- [Security notes](#security-notes)
 
 ## Features
 
@@ -35,6 +49,78 @@ Housy is a full-stack rental property platform that connects renters and propert
 - Role-based access for renters, owners, and administrators
 - Property and account verification workflows
 - Platform activity and rental-management tools
+
+## Architecture
+
+### System overview
+
+```mermaid
+flowchart LR
+    subgraph Client["Browser"]
+        UI["React 19 + Vite SPA<br/>React Router"]
+        MAPS["Google Maps API"]
+    end
+
+    subgraph Server["Backend — Node.js / Express"]
+        API["REST API<br/>(Axios requests)"]
+        WS["Socket.IO server<br/>(chat & live updates)"]
+        subgraph Modules["Route modules"]
+            direction TB
+            M1["Auth"] --- M2["Properties & Search"]
+            M2 --- M3["Visits & Lease requests"]
+            M3 --- M4["Agreements & PDF"]
+            M4 --- M5["Payments"]
+            M5 --- M6["Maintenance"]
+            M6 --- M7["Admin"]
+        end
+    end
+
+    subgraph Data["Data layer"]
+        DB[("MySQL")]
+        CACHE[("Redis<br/>cache / sessions")]
+    end
+
+    subgraph External["Third-party services"]
+        CDN["Cloudinary<br/>photos & videos"]
+        MAIL["Resend<br/>email"]
+        PAY["Stripe / bKash"]
+    end
+
+    UI -- "HTTPS / JSON" --> API
+    UI <-- "WebSocket" --> WS
+    UI --> MAPS
+    API --> Modules
+    WS --> Modules
+    Modules --> DB
+    Modules --> CACHE
+    Modules --> CDN
+    Modules --> MAIL
+    Modules --> PAY
+```
+
+### Rental lifecycle
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor R as Renter
+    participant F as Frontend
+    participant B as Backend
+    actor O as Owner
+
+    R->>F: Browse, filter & take walkthrough
+    R->>F: Schedule visit / request to lease
+    F->>B: Create request
+    B-->>O: Notify (Socket.IO / email)
+    O->>B: Approve & prepare agreement
+    B-->>R: Agreement ready for review
+    R->>B: Sign agreement
+    O->>B: Sign agreement
+    B-->>F: Generate agreement PDF
+    R->>B: Pay rent (Stripe / bKash / cash)
+    R->>B: Raise maintenance request
+    B-->>O: Maintenance notification
+```
 
 ## Technology stack
 
@@ -167,21 +253,6 @@ Use `Backend/.env.example` as the source of truth for supported backend variable
 - Stripe and bKash payment settings
 
 Do not place real passwords, API keys, tokens, or private credentials in this README or commit them to Git.
-
-## Main backend modules
-
-The backend is organized around route modules for:
-
-- Authentication
-- Properties and filtering
-- Search
-- Stay and lease requests
-- Visit schedules
-- Chat and messaging
-- Agreements and PDF generation
-- Payments
-- Maintenance
-- Administration
 
 ## Database changes
 
