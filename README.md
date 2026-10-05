@@ -293,3 +293,6 @@ The production output is generated in `Frontend/dist/`.
 ## License
 
 No open-source license has been specified for this project. Unless a license is added, all rights are reserved by the project owner.
+## Frontend
+
+The Housy frontend is built with React and provides interfaces for property browsing, tenant dashboards, owner management, scheduling, payments, and communication.
